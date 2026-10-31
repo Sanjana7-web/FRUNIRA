@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>FRUNIRA Order</title>
+
+    <style>
+        body {
+            font-family: Arial;
+            background-color: #f8f1df;
+            text-align: center;
+        }
+
+        .order-box {
+            width: 350px;
+            margin: 50px auto;
+            padding: 25px;
+            background: white;
+            border-radius: 15px;
+        }
+
+        input, select {
+            width: 90%;
+            padding: 10px;
+            margin: 8px;
+        }
+
+        button {
+            padding: 10px 20px;
+            background-color: #006400;
+            color: white;
+            border: none;
+            border-radius: 20px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+
+<div class="order-box">
+
+    <h2>FRUNIRA Order</h2>
+
+    <input type="text" id="name" placeholder="Enter your name">
+
+    <input type="tel" id="phone" placeholder="Enter phone number">
+
+    <input type="text" id="address" placeholder="Enter delivery address">
+
+    <select id="fruit">
+        <option>Apple</option>
+        <option>Grapes</option>
+        <option>Pineapple</option>
+        <option>Watermelon</option>
+        <option>Strawberry</option>
+    </select>
+
+    <input type="number" id="quantity" placeholder="Quantity (kg)">
+
+    <br>
+
+    <button onclick="getLocation()">Get My Location</button>
+
+    <p id="location">Location not selected</p>
+
+    <button onclick="placeOrder()">Place Order</button>
+
+</div>
+
+<script>
+
+let latitude = "";
+let longitude = "";
+
+function getLocation() {
+
+    if (navigator.geolocation) {
+
+        navigator.geolocation.getCurrentPosition(
+            function(position) {
+
+                latitude = position.coords.latitude;
+                longitude = position.coords.longitude;
+
+                document.getElementById("location").innerHTML =
+                    "Location Selected ✓";
+
+            },
+
+            function() {
+                alert("Please allow location access.");
+            }
+        );
+
+    } else {
+        alert("Location is not supported.");
+    }
+}
+
+function placeOrder() {
+
+    let name = document.getElementById("name").value;
+    let phone = document.getElementById("phone").value;
+    let address = document.getElementById("address").value;
+    let fruit = document.getElementById("fruit").value;
+    let quantity = document.getElementById("quantity").value;
+
+    if (name == "" || phone == "" || address == "" || quantity == "") {
+        alert("Please fill all details.");
+        return;
+    }
+
+    alert(
+        "Order Placed Successfully! 🎉\n\n" +
+        "Name: " + name +
+        "\nFruit: " + fruit +
+        "\nQuantity: " + quantity + " kg" +
+        "\nPhone: " + phone +
+        "\nAddress: " + address +
+        "\nLocation: " + latitude + ", " + longitude
+    );
+}
+
+</script>
+
+</body>
+</html>

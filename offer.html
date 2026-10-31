@@ -1,0 +1,617 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>FRUNIRA - Fresh Fruits</title>
+
+<style>
+
+/* ---------- BASIC ---------- */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #FFF8E1;
+    color: #4A0E1E;
+}
+
+
+/* ---------- HEADER ---------- */
+
+header {
+    background-color: #4A0E1E;
+    color: white;
+}
+
+
+/* ---------- NAV BAR ---------- */
+
+nav {
+    background-color: #B56576;
+    color: white;
+}
+
+
+/* ---------- HERO ---------- */
+
+.hero {
+    min-height: 400px;
+    background: linear-gradient(135deg, #F2D7DC, #FFF8E1);
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    padding: 40px 8%;
+}
+
+.hero-text h1 {
+    font-size: 50px;
+    color: #4A0E1E;
+}
+
+.hero-text p {
+    font-size: 20px;
+    margin: 15px 0;
+}
+
+.hero-text button {
+    padding: 13px 28px;
+    border: none;
+    background: #4A0E1E;
+    color: white;
+    border-radius: 25px;
+    cursor: pointer;
+}
+
+
+/* ---------- SALE POSTER ---------- */
+
+.sale-poster {
+    width: 90%;
+    max-width: 1100px;
+    margin: 40px auto;
+    background: linear-gradient(135deg, #B56576, #D89AA7);
+    padding: 25px;
+    border-radius: 20px;
+    text-align: center;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.2);
+}
+
+.sale-top {
+    background: white;
+    padding: 15px;
+    border-radius: 15px;
+    margin-bottom: 20px;
+}
+
+.sale-top h2 {
+    font-size: 38px;
+    color: #4A0E1E;
+    letter-spacing: 3px;
+}
+
+.sale-top p {
+    color: #555;
+    margin-top: 5px;
+}
+
+.sale-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    gap: 20px;
+}
+
+.sale-text {
+    color: white;
+}
+
+.small-title {
+    font-size: 25px;
+    font-weight: bold;
+}
+
+.sale-text h1 {
+    font-size: 65px;
+    margin: 0;
+    font-family: cursive;
+}
+
+.offer-text {
+    font-size: 22px;
+    font-weight: bold;
+    margin: 10px;
+}
+
+.discount {
+    font-size: 70px;
+    font-weight: bold;
+    text-shadow: 2px 3px 5px #666;
+}
+
+.limited {
+    font-size: 13px;
+    letter-spacing: 2px;
+    margin: 10px;
+}
+
+.sale-text button {
+    background: #4A0E1E;
+    color: white;
+    border: none;
+    padding: 13px 30px;
+    border-radius: 25px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.sale-text button:hover {
+    background: white;
+    color: #4A0E1E;
+}
+
+.fruit-image img {
+    width: 400px;
+    max-width: 100%;
+}
+
+
+/* ---------- OFFER BOXES ---------- */
+
+.special-offers {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    flex-wrap: wrap;
+    margin-top: 25px;
+}
+
+.offer-box {
+    background: white;
+    color: #4A0E1E;
+    padding: 18px 25px;
+    border-radius: 12px;
+    min-width: 220px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+}
+
+.offer-box h3 {
+    margin-bottom: 7px;
+}
+
+.shop-time {
+    color: white;
+    font-weight: bold;
+    margin-top: 25px;
+}
+
+
+/* ---------- FRUIT OFFERS ---------- */
+
+.section-title {
+    text-align: center;
+    font-size: 32px;
+    margin: 40px 0 25px;
+    color: #4A0E1E;
+}
+
+.fruit-container {
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+    flex-wrap: wrap;
+    padding: 20px;
+}
+
+.fruit-card {
+    background: white;
+    width: 240px;
+    padding: 20px;
+    text-align: center;
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.15);
+}
+
+.fruit-card img {
+    width: 150px;
+    height: 130px;
+    object-fit: contain;
+}
+
+.fruit-card h3 {
+    margin: 10px 0;
+    color: #4A0E1E;
+}
+
+.price {
+    font-size: 20px;
+    font-weight: bold;
+    color: #B56576;
+}
+
+.bogo {
+    display: inline-block;
+    background: #E8B8C1;
+    color: #4A0E1E;
+    padding: 7px 12px;
+    border-radius: 15px;
+    margin: 10px 0;
+    font-weight: bold;
+}
+
+.fruit-card button {
+    border: none;
+    background: #4A0E1E;
+    color: white;
+    padding: 10px 18px;
+    border-radius: 20px;
+    cursor: pointer;
+}
+
+.fruit-card button:hover {
+    background: #B56576;
+    color: white;
+}
+
+
+/* ---------- FOOTER ---------- */
+
+footer {
+    margin-top: 50px;
+    background: #4A0E1E;
+    color: white;
+    text-align: center;
+    padding: 25px;
+}
+
+footer p {
+    margin: 5px;
+    font-size: 14px;
+}
+
+
+/* ---------- MOBILE ---------- */
+
+@media (max-width: 700px) {
+
+    header {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    nav {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 12px;
+    }
+
+    .hero {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .hero-text h1 {
+        font-size: 38px;
+    }
+
+    .sale-content {
+        flex-direction: column;
+    }
+
+    .sale-text h1 {
+        font-size: 50px;
+    }
+
+    .discount {
+        font-size: 55px;
+    }
+}
+
+</style>
+</head>
+
+
+<body>
+
+
+<!-- ================= SALE POSTER ================= -->
+
+<section class="sale-poster">
+
+    <div class="sale-top">
+
+        <h2>FRUNIRA</h2>
+
+        <p>
+            Fresh Fruits • Healthy Life • Happy You
+        </p>
+
+    </div>
+
+
+    <div class="sale-content">
+
+        <div class="sale-text">
+
+            <p class="small-title">
+                FRUIT
+            </p>
+
+            <h1>SALE</h1>
+
+            <p class="offer-text">
+                ALL FRUITS MARKED DOWN
+            </p>
+
+            <div class="discount">
+                30% OFF
+            </div>
+
+            <p class="limited">
+                LIMITED TIME OFFER
+            </p>
+
+            <button onclick="scrollToOffers()">
+                SHOP NOW
+            </button>
+
+        </div>
+
+
+        <div class="fruit-image">
+
+            <img src="offer.jpeg"
+                 alt="Fruit Basket">
+
+        </div>
+
+    </div>
+
+
+    <!-- SPECIAL OFFERS -->
+
+    <div class="special-offers">
+
+        <div class="offer-box">
+
+            <h3>🍎 BUY 1 GET 1 FREE</h3>
+
+            <p>
+                On selected Apples
+            </p>
+
+        </div>
+
+
+        <div class="offer-box">
+
+            <h3>🥭 BUY 1 GET 1 FREE</h3>
+
+            <p>
+                On selected Mangoes
+            </p>
+
+        </div>
+
+
+        <div class="offer-box">
+
+            <h3>🍊 20% OFF</h3>
+
+            <p>
+                On selected Oranges
+            </p>
+
+        </div>
+
+    </div>
+
+
+    <p class="shop-time">
+        OPEN DAILY 8 AM TO 9 PM
+    </p>
+
+</section>
+
+
+
+<!-- ================= FRUIT OFFERS ================= -->
+
+<h2 class="section-title" id="offers">
+    Special Fruit Offers
+</h2>
+
+
+<div class="fruit-container">
+
+
+    <!-- APPLE -->
+
+    <div class="fruit-card">
+
+        <img src="apple.jpeg"
+             alt="Apple">
+
+        <h3>Fresh Apple</h3>
+
+        <p class="price">
+            ₹120 / kg
+        </p>
+
+        <div class="bogo">
+            BUY 1 GET 1 FREE
+        </div>
+
+        <br>
+
+        <button onclick="addToCart('Apple',120)">
+            Add to Cart
+        </button>
+
+    </div>
+
+
+
+    <!-- MANGO -->
+
+    <div class="fruit-card">
+
+        <img src="mango.jpeg"
+             alt="Mango">
+
+        <h3>Fresh Mango</h3>
+
+        <p class="price">
+            ₹150 / kg
+        </p>
+
+        <div class="bogo">
+            BUY 1 GET 1 FREE
+        </div>
+
+        <br>
+
+        <button onclick="addToCart('Mango',150)">
+            Add to Cart
+        </button>
+
+    </div>
+
+
+
+    <!-- ORANGE -->
+
+    <div class="fruit-card">
+
+        <img src="orange.jpeg"
+             alt="Orange">
+
+        <h3>Fresh Orange</h3>
+
+        <p class="price">
+            ₹100 / kg
+        </p>
+
+        <div class="bogo">
+            BUY 1 GET 1 FREE
+        </div>
+
+        <br>
+
+        <button onclick="addToCart('Orange',100)">
+            Add to Cart
+        </button>
+
+    </div>
+
+
+
+    <!-- STRAWBERRY -->
+
+    <div class="fruit-card">
+
+        <img src="strawberry.jpeg"
+             alt="Strawberry">
+
+        <h3>Fresh Strawberry</h3>
+
+        <p class="price">
+            ₹180 / box
+        </p>
+
+        <div class="bogo">
+            BUY 1 GET 1 FREE
+        </div>
+
+        <br>
+
+        <button onclick="addToCart('Strawberry',180)">
+            Add to Cart
+        </button>
+
+    </div>
+
+</div>
+
+
+
+<!-- ================= JAVASCRIPT ================= -->
+
+<script>
+
+function scrollToOffers() {
+
+    document.getElementById("offers").scrollIntoView({
+        behavior: "smooth"
+    });
+
+}
+
+
+function addToCart(name, price) {
+
+    let cart =
+        JSON.parse(localStorage.getItem("cart")) || [];
+
+    let existing =
+        cart.find(item => item.name === name);
+
+
+    if (existing) {
+
+        existing.quantity =
+            (existing.quantity || 1) + 1;
+
+    } else {
+
+        cart.push({
+
+            name: name,
+
+            price: price,
+
+            quantity: 1,
+
+            offer: "BUY 1 GET 1 FREE"
+
+        });
+
+    }
+
+
+    localStorage.setItem(
+        "cart",
+        JSON.stringify(cart)
+    );
+
+
+    alert(
+        name +
+        " added to cart!\n" +
+        "BUY 1 GET 1 FREE 🎁"
+    );
+
+}
+
+</script>
+
+
+<!-- ================= FOOTER ================= -->
+
+<footer>
+
+    <p>
+        © 2026 FRUNIRA | Fresh Fruit • Healthy Life • Happy You
+    </p>
+
+</footer>
+
+
+</body>
+</html>

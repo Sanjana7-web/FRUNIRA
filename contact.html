@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+    <title>Frunira | Contact Us</title>
+
+    <style>
+
+        /* Whole Page */
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: #FFF8E1;
+        }
+
+
+        /* Header */
+        header {
+            background-color: #4A0E1E;
+            color: white;
+        }
+
+
+        /* Nav Bar */
+        nav {
+            background-color: #B56576;
+            color: white;
+        }
+
+
+        /* Contact Section */
+        .contact {
+            width: 75%;
+
+            margin: 30px auto;
+            padding: 35px;
+
+            background-color: white;
+
+            border-radius: 15px;
+
+            box-shadow: 0 3px 15px #cccccc;
+
+            text-align: center;
+        }
+
+        .contact h2 {
+            color: #4A0E1E;
+            font-size: 30px;
+        }
+
+        .email {
+            color: #555;
+        }
+
+        .contact h3 {
+            color: #4A0E1E;
+            margin-top: 30px;
+        }
+
+
+        /* Form */
+        #contactForm {
+            margin-top: 25px;
+        }
+
+        #contactForm input,
+        #contactForm textarea {
+
+            width: 90%;
+
+            padding: 15px;
+
+            margin: 10px 0;
+
+            border: 1px solid #ddd;
+
+            border-radius: 6px;
+
+            box-sizing: border-box;
+
+            font-size: 15px;
+
+            outline: none;
+        }
+
+
+        /* Message Box */
+        #contactForm textarea {
+            height: 120px;
+            resize: vertical;
+        }
+
+
+        /* Submit Button */
+        .submit-btn {
+
+            margin-top: 15px;
+
+            padding: 12px 30px;
+
+            border: none;
+
+            border-radius: 6px;
+
+            background-color: #B56576;
+
+            color: white;
+
+            font-size: 16px;
+
+            font-weight: bold;
+
+            cursor: pointer;
+        }
+
+        .submit-btn:hover {
+            background-color: #4A0E1E;
+        }
+
+
+        /* Footer */
+        footer {
+            background-color: #4A0E1E;
+
+            color: white;
+
+            text-align: center;
+
+            padding: 18px;
+
+            margin-top: 20px;
+        }
+
+        footer p {
+            margin: 5px;
+            font-size: 14px;
+        }
+
+
+        .services-container {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+
+    </style>
+
+</head>
+
+<body>
+
+
+    <!-- CONTACT -->
+
+    <section class="contact">
+
+        <h2>Contact Us</h2>
+
+        <p class="email">
+            ✉ Email: FRUNIRA@gmail.com
+        </p>
+
+        <h3>
+            Send us a message
+        </h3>
+
+
+        <!-- FORM -->
+
+        <form id="contactForm">
+
+            <input
+                type="text"
+                id="name"
+                placeholder="Enter your name"
+                required
+            >
+
+            <input
+                type="email"
+                id="email"
+                placeholder="Enter your email"
+                required
+            >
+
+            <textarea
+                id="message"
+                placeholder="Enter your message"
+                required
+            ></textarea>
+
+            <br>
+
+            <button
+                type="submit"
+                class="submit-btn"
+            >
+                Submit
+            </button>
+
+        </form>
+
+    </section>
+
+
+    <!-- FOOTER -->
+
+    <footer>
+
+        © 2026 FRUNIRA |
+        Fresh Fruit • Healthy Life • Happy You
+
+    </footer>
+
+
+    <!-- JAVASCRIPT -->
+
+    <script>
+
+        document
+        .getElementById("contactForm")
+        .addEventListener("submit", function(event) {
+
+            // Stop page refresh
+            event.preventDefault();
+
+            // Show message
+            alert(
+                "Thank you! Your message has been submitted."
+            );
+
+            // Clear entered data
+            this.reset();
+
+        });
+
+    </script>
+
+
+</body>
+</html>

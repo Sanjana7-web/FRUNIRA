@@ -1,0 +1,1061 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>FRUNIRA - Varieties</title>
+
+    <style>
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: #FFF8E1;
+}
+
+
+/* ================= CART COUNT ================= */
+
+.cart-count {
+    background: #FFD83D;
+    color: black;
+    padding: 5px 9px;
+    border-radius: 50%;
+    font-weight: bold;
+}
+
+/* ================= HEADING ================= */
+
+.heading {
+    text-align: center;
+    padding: 30px;
+    background-color: #FFF8E1;
+}
+
+.heading h1 {
+    color: #4A0E1E;
+}
+
+.heading p {
+    color: #555;
+}
+
+/* ================= SECTION ================= */
+
+.section-title {
+    text-align: center;
+    color: #4A0E1E;
+    margin: 25px;
+}
+
+/* ================= FRUIT GRID ================= */
+
+.fruit-container {
+    width: 90%;
+    max-width: 1200px;
+    margin: auto;
+
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+
+    gap: 25px;
+}
+
+/* ================= FRUIT CARD ================= */
+
+.fruit-card {
+    background: #FFFFFF;
+    padding: 20px;
+
+    text-align: center;
+
+    border-radius: 12px;
+
+    box-shadow:
+        0 3px 10px rgba(0,0,0,0.15);
+}
+
+.fruit-card img {
+    width: 170px;
+    height: 120px;
+
+    object-fit: cover;
+
+    border-radius: 10px;
+}
+
+.fruit-card h3 {
+    color: #4A0E1E;
+    margin: 15px 0 8px;
+}
+
+.fruit-card p {
+    color: #555;
+    font-size: 14px;
+}
+
+.price {
+    color: #4A0E1E;
+    font-weight: bold;
+    font-size: 17px;
+}
+
+/* ================= BUTTONS ================= */
+
+button {
+    border: none;
+    padding: 8px 14px;
+    border-radius: 20px;
+    cursor: pointer;
+    margin: 5px;
+    font-weight: bold;
+}
+
+/* ADD TO CART */
+
+.cart-btn {
+    background: #B56576;
+    color: white;
+}
+
+/* ORDER NOW */
+
+.order-btn {
+    background: #4A0E1E;
+    color: white;
+}
+
+button:hover {
+    opacity: 0.85;
+}
+
+/* ================= RESPONSIVE ================= */
+
+@media(max-width: 900px) {
+
+    .fruit-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+}
+
+@media(max-width: 600px) {
+
+    nav {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .fruit-container {
+        grid-template-columns: 1fr;
+    }
+
+}
+
+/* ================= FOOTER ================= */
+
+footer {
+    background-color: #4A0E1E;
+    color: white;
+
+    text-align: center;
+
+    padding: 18px;
+
+    margin-top: 20px;
+}
+
+footer p {
+    margin: 5px;
+    font-size: 14px;
+}
+
+</style>
+</head>
+
+
+<body>
+
+
+
+
+
+<!-- HEADING -->
+
+<div class="heading">
+
+    <h1>Fresh Fruits</h1>
+
+    <p>
+        Choose your favourite fresh fruits
+    </p>
+
+</div>
+
+
+<h2 class="section-title">
+   
+</h2>
+
+
+
+<!-- FRUIT CARDS -->
+
+<div class="fruit-container">
+
+
+    <!-- APPLE -->
+
+    <div class="fruit-card">
+
+        <img src="apple.jpeg">
+
+        <h3>Apple</h3>
+
+        <p>
+            Fresh and juicy red apples.
+        </p>
+
+        <div class="price">
+            ₹180 / kg
+        </div>
+
+        <button
+            class="cart-btn"
+            onclick="addToCart('Apple',180)">
+
+            Add to Cart
+
+        </button>
+
+        <button
+            class="order-btn"
+            onclick="orderNow('Apple',180)">
+
+            Order Now
+
+        </button>
+
+    </div>
+
+
+
+    <!-- MANGO -->
+
+    <div class="fruit-card">
+
+        <img src="mango.jpeg">
+
+        <h3>Mango</h3>
+
+        <p>
+            Sweet and delicious mango.
+        </p>
+
+        <div class="price">
+            ₹120 / kg
+        </div>
+
+        <button
+            class="cart-btn"
+            onclick="addToCart('Mango',120)">
+
+            Add to Cart
+
+        </button>
+
+        <button
+            class="order-btn"
+            onclick="orderNow('Mango',120)">
+
+            Order Now
+
+        </button>
+
+    </div>
+
+
+
+    <!-- ORANGE -->
+
+    <div class="fruit-card">
+
+        <img src="orange.jpeg">
+
+        <h3>Orange</h3>
+
+        <p>
+            Juicy and fresh oranges.
+        </p>
+
+        <div class="price">
+            ₹100 / kg
+        </div>
+
+        <button
+            class="cart-btn"
+            onclick="addToCart('Orange',100)">
+
+            Add to Cart
+
+        </button>
+
+        <button
+            class="order-btn"
+            onclick="orderNow('Orange',100)">
+
+            Order Now
+
+        </button>
+
+    </div>
+
+
+
+    <!-- BANANA -->
+
+    <div class="fruit-card">
+
+        <img src="banana.jpeg">
+
+        <h3>Banana</h3>
+
+        <p>
+            Fresh naturally sweet bananas.
+        </p>
+
+        <div class="price">
+            ₹60 / kg
+        </div>
+
+        <button
+            class="cart-btn"
+            onclick="addToCart('Banana',60)">
+
+            Add to Cart
+
+        </button>
+
+        <button
+            class="order-btn"
+            onclick="orderNow('Banana',60)">
+
+            Order Now
+
+        </button>
+
+    </div>
+
+
+
+    <!-- GRAPES -->
+
+    <div class="fruit-card">
+
+        <img src="grapes.jpeg">
+
+        <h3>Grapes</h3>
+
+        <p>
+            Fresh juicy grapes.
+        </p>
+
+        <div class="price">
+            ₹90 / kg
+        </div>
+
+        <button
+            class="cart-btn"
+            onclick="addToCart('Grapes',90)">
+
+            Add to Cart
+
+        </button>
+
+        <button
+            class="order-btn"
+            onclick="orderNow('Grapes',90)">
+
+            Order Now
+
+        </button>
+
+    </div>
+
+
+
+    <!-- PINEAPPLE -->
+
+    <div class="fruit-card">
+
+        <img src="pine.jpeg">
+
+        <h3>Pineapple</h3>
+
+        <p>
+            Sweet and fresh pineapple.
+        </p>
+
+        <div class="price">
+            ₹80 / kg
+        </div>
+
+        <button
+            class="cart-btn"
+            onclick="addToCart('Pineapple',80)">
+
+            Add to Cart
+
+        </button>
+
+        <button
+            class="order-btn"
+            onclick="orderNow('Pineapple',80)">
+
+            Order Now
+
+        </button>
+
+    </div>
+
+
+
+    <!-- WATERMELON -->
+
+    <div class="fruit-card">
+
+        <img src="watermelon.jpeg">
+
+        <h3>Watermelon</h3>
+
+        <p>
+            Fresh and refreshing watermelon.
+        </p>
+
+        <div class="price">
+            ₹40 / kg
+        </div>
+
+        <button
+            class="cart-btn"
+            onclick="addToCart('Watermelon',40)">
+
+            Add to Cart
+
+        </button>
+
+        <button
+            class="order-btn"
+            onclick="orderNow('Watermelon',40)">
+
+            Order Now
+
+        </button>
+
+    </div>
+
+
+
+    <!-- STRAWBERRY -->
+
+    <div class="fruit-card">
+
+        <img src="strawberry.jpeg">
+
+        <h3>Strawberry</h3>
+
+        <p>
+            Fresh and tasty strawberries.
+        </p>
+
+        <div class="price">
+            ₹250 / kg
+        </div>
+
+        <button
+            class="cart-btn"
+            onclick="addToCart('Strawberry',250)">
+
+            Add to Cart
+
+        </button>
+
+        <button
+            class="order-btn"
+            onclick="orderNow('Strawberry',250)">
+
+            Order Now
+
+        </button>
+
+    </div>
+	<!-- 9. PAPAYA -->
+    <div class="fruit-card">
+        <img src="papaya.jpeg">
+        <h3>Papaya</h3>
+        <p>Soft and sweet papaya.</p>
+        <div class="price">₹70 / kg</div>
+
+        <button class="cart-btn"
+            onclick="addToCart('Papaya',70)">
+            Add to Cart
+        </button>
+
+        <button class="order-btn"
+            onclick="orderNow('Papaya',70)">
+            Order Now
+        </button>
+    </div>
+
+
+    <!-- 10. GUAVA -->
+    <div class="fruit-card">
+        <img src="guava.jpeg">
+        <h3>Guava</h3>
+        <p>Fresh and crunchy guavas.</p>
+        <div class="price">₹80 / kg</div>
+
+        <button class="cart-btn"
+            onclick="addToCart('Guava',80)">
+            Add to Cart
+        </button>
+
+        <button class="order-btn"
+            onclick="orderNow('Guava',80)">
+            Order Now
+        </button>
+    </div>
+
+
+    <!-- 11. POMEGRANATE -->
+    <div class="fruit-card">
+        <img src="promo.jpeg">
+        <h3>Pomegranate</h3>
+        <p>Juicy and fresh pomegranate.</p>
+        <div class="price">₹160 / kg</div>
+
+        <button class="cart-btn"
+            onclick="addToCart('Pomegranate',160)">
+            Add to Cart
+        </button>
+
+        <button class="order-btn"
+            onclick="orderNow('Pomegranate',160)">
+            Order Now
+        </button>
+    </div>
+
+
+    <!-- 12. KIWI -->
+    <div class="fruit-card">
+        <img src="kiwi.jpeg">
+        <h3>Kiwi</h3>
+        <p>Fresh and tangy kiwi fruit.</p>
+        <div class="price">₹220 / kg</div>
+
+        <button class="cart-btn"
+            onclick="addToCart('Kiwi',220)">
+            Add to Cart
+        </button>
+
+        <button class="order-btn"
+            onclick="orderNow('Kiwi',220)">
+            Order Now
+        </button>
+    </div>
+
+
+    <!-- 13. DRAGON FRUIT -->
+    <div class="fruit-card">
+        <img src="dragonfruit.jpeg">
+        <h3>Dragon Fruit</h3>
+        <p>Fresh exotic dragon fruit.</p>
+        <div class="price">₹180 / kg</div>
+
+        <button class="cart-btn"
+            onclick="addToCart('Dragon Fruit',180)">
+            Add to Cart
+        </button>
+
+        <button class="order-btn"
+            onclick="orderNow('Dragon Fruit',180)">
+            Order Now
+        </button>
+    </div>
+
+
+    <!-- 14. PEAR -->
+    <div class="fruit-card">
+        <img src="pear.jpeg">
+        <h3>Pear</h3>
+        <p>Sweet and juicy pears.</p>
+        <div class="price">₹140 / kg</div>
+
+        <button class="cart-btn"
+            onclick="addToCart('Pear',140)">
+            Add to Cart
+        </button>
+
+        <button class="order-btn"
+            onclick="orderNow('Pear',140)">
+            Order Now
+        </button>
+    </div>
+
+
+    <!-- 15. PEACH -->
+    <div class="fruit-card">
+        <img src="peach.jpeg">
+        <h3>Peach</h3>
+        <p>Soft and juicy peaches.</p>
+        <div class="price">₹200 / kg</div>
+
+        <button class="cart-btn"
+            onclick="addToCart('Peach',200)">
+            Add to Cart
+        </button>
+
+        <button class="order-btn"
+            onclick="orderNow('Peach',200)">
+            Order Now
+        </button>
+    </div>
+
+
+    
+    <!-- 17. CHERRY -->
+    <div class="fruit-card">
+        <img src="cherry.jpeg">
+        <h3>Cherry</h3>
+        <p>Sweet and fresh red cherries.</p>
+        <div class="price">₹350 / kg</div>
+
+        <button class="cart-btn"
+            onclick="addToCart('Cherry',350)">
+            Add to Cart
+        </button>
+
+        <button class="order-btn"
+            onclick="orderNow('Cherry',350)">
+            Order Now
+        </button>
+    </div>
+
+
+    <!-- 18. BLUEBERRY -->
+    <div class="fruit-card">
+        <img src="blueberry.jpeg">
+        <h3>Blueberry</h3>
+        <p>Fresh juicy blueberries.</p>
+        <div class="price">₹400 / kg</div>
+
+        <button class="cart-btn"
+            onclick="addToCart('Blueberry',400)">
+            Add to Cart
+        </button>
+
+        <button class="order-btn"
+            onclick="orderNow('Blueberry',400)">
+            Order Now
+        </button>
+    </div>
+
+
+    <!-- 19. RASPBERRY -->
+    <div class="fruit-card">
+        <img src="rasberry.jpeg">
+        <h3>Raspberry</h3>
+        <p>Fresh red raspberries.</p>
+        <div class="price">₹450 / kg</div>
+
+        <button class="cart-btn"
+            onclick="addToCart('Raspberry',450)">
+            Add to Cart
+        </button>
+
+        <button class="order-btn"
+            onclick="orderNow('Raspberry',450)">
+            Order Now
+        </button>
+    </div>
+
+
+    <!-- 20. BLACKBERRY -->
+    <div class="fruit-card">
+        <img src="blackberry.jpeg">
+        <h3>Blackberry</h3>
+        <p>Juicy and fresh blackberries.</p>
+        <div class="price">₹420 / kg</div>
+
+        <button class="cart-btn"
+            onclick="addToCart('Blackberry',420)">
+            Add to Cart
+        </button>
+
+        <button class="order-btn"
+            onclick="orderNow('Blackberry',420)">
+            Order Now
+        </button>
+    </div>
+
+
+   
+
+    <!-- 22. MUSKMELON -->
+    <div class="fruit-card">
+        <img src="muskmelon.jpeg">
+        <h3>Muskmelon</h3>
+        <p>Sweet and refreshing melon.</p>
+        <div class="price">₹60 / kg</div>
+
+        <button class="cart-btn"
+            onclick="addToCart('Muskmelon',60)">
+            Add to Cart
+        </button>
+
+        <button class="order-btn"
+            onclick="orderNow('Muskmelon',60)">
+            Order Now
+        </button>
+    </div>
+
+
+    
+
+   
+
+   
+
+
+
+
+<!-- 27. GRAPEFRUIT -->
+<div class="fruit-card">
+    <img src="grapefruit.jpeg">
+    <h3>Grapefruit</h3>
+    <p>Juicy and refreshing grapefruit.</p>
+    <div class="price">₹150 / kg</div>
+
+    <button class="cart-btn"
+        onclick="addToCart('Grapefruit',150)">
+        Add to Cart
+    </button>
+
+    <button class="order-btn"
+        onclick="orderNow('Grapefruit',150)">
+        Order Now
+    </button>
+</div>
+
+
+<!-- 28. AVOCADO -->
+<div class="fruit-card">
+    <img src="avacado.jpeg">
+    <h3>Avocado</h3>
+    <p>Fresh creamy and healthy avocado.</p>
+    <div class="price">₹250 / kg</div>
+
+    <button class="cart-btn"
+        onclick="addToCart('Avocado',250)">
+        Add to Cart
+    </button>
+
+    <button class="order-btn"
+        onclick="orderNow('Avocado',250)">
+        Order Now
+    </button>
+</div>
+
+
+<!-- 29. JACKFRUIT -->
+<div class="fruit-card">
+    <img src="jackfruit.jpeg">
+    <h3>Jackfruit</h3>
+    <p>Sweet and delicious ripe jackfruit.</p>
+    <div class="price">₹90 / kg</div>
+
+    <button class="cart-btn"
+        onclick="addToCart('Jackfruit',90)">
+        Add to Cart
+    </button>
+
+    <button class="order-btn"
+        onclick="orderNow('Jackfruit',90)">
+        Order Now
+    </button>
+</div>
+
+
+<!-- 30. LYCHEE -->
+<div class="fruit-card">
+    <img src="leach.jpeg">
+    <h3>Lychee</h3>
+    <p>Sweet and juicy fresh lychees.</p>
+    <div class="price">₹180 / kg</div>
+
+    <button class="cart-btn"
+        onclick="addToCart('Lychee',180)">
+        Add to Cart
+    </button>
+
+    <button class="order-btn"
+        onclick="orderNow('Lychee',180)">
+        Order Now
+    </button>
+</div>
+
+
+
+<!-- 32. CRANBERRY -->
+<div class="fruit-card">
+    <img src="cranberry.jpeg">
+    <h3>Cranberry</h3>
+    <p>Fresh red and tangy cranberries.</p>
+    <div class="price">₹450 / kg</div>
+
+    <button class="cart-btn"
+        onclick="addToCart('Cranberry',450)">
+        Add to Cart
+    </button>
+
+    <button class="order-btn"
+        onclick="orderNow('Cranberry',450)">
+        Order Now
+    </button>
+</div>
+
+
+<!-- 33. MULBERRY -->
+<div class="fruit-card">
+    <img src="mulberry.jpeg">
+    <h3>Mulberry</h3>
+    <p>Sweet and juicy fresh mulberries.</p>
+    <div class="price">₹350 / kg</div>
+
+    <button class="cart-btn"
+        onclick="addToCart('Mulberry',350)">
+        Add to Cart
+    </button>
+
+    <button class="order-btn"
+        onclick="orderNow('Mulberry',350)">
+        Order Now
+    </button>
+</div>
+
+
+
+
+
+<!-- 35. CUSTARD APPLE -->
+<div class="fruit-card">
+    <img src="custardapple.jpeg">
+    <h3>Custard Apple</h3>
+    <p>Soft, creamy and sweet custard apple.</p>
+    <div class="price">₹140 / kg</div>
+
+    <button class="cart-btn"
+        onclick="addToCart('Custard Apple',140)">
+        Add to Cart
+    </button>
+
+    <button class="order-btn"
+        onclick="orderNow('Custard Apple',140)">
+        Order Now
+    </button>
+</div>
+
+
+<!-- 36. SAPOTA -->
+<div class="fruit-card">
+    <img src="sapota.jpeg">
+    <h3>Sapota</h3>
+    <p>Sweet and soft fresh sapota.</p>
+    <div class="price">₹90 / kg</div>
+
+    <button class="cart-btn"
+        onclick="addToCart('Sapota',90)">
+        Add to Cart
+    </button>
+
+    <button class="order-btn"
+        onclick="orderNow('Sapota',90)">
+        Order Now
+    </button>
+</div>
+
+
+
+
+
+
+   
+
+<!-- 42. RAMBUTAN -->
+<div class="fruit-card">
+    <img src="rambutan.jpeg">
+    <h3>Rambutan</h3>
+    <p>Sweet and juicy exotic rambutan.</p>
+    <div class="price">₹280 / kg</div>
+
+    <button class="cart-btn"
+        onclick="addToCart('Rambutan',280)">
+        Add to Cart
+    </button>
+
+    <button class="order-btn"
+        onclick="orderNow('Rambutan',280)">
+        Order Now
+    </button>
+</div>
+
+
+<!-- 43. MANGOSTEEN -->
+<div class="fruit-card">
+    <img src="mangosten.jpeg">
+    <h3>Mangosteen</h3>
+    <p>Sweet and juicy tropical mangosteen.</p>
+    <div class="price">₹350 / kg</div>
+
+    <button class="cart-btn"
+        onclick="addToCart('Mangosteen',350)">
+        Add to Cart
+    </button>
+
+    <button class="order-btn"
+        onclick="orderNow('Mangosteen',350)">
+        Order Now
+    </button>
+</div>
+
+
+
+
+
+<!-- 45. LONGAN -->
+<div class="fruit-card">
+    <img src="l.jpeg">
+    <h3>Longan</h3>
+    <p>Sweet and juicy tropical longan.</p>
+    <div class="price">₹300 / kg</div>
+
+    <button class="cart-btn"
+        onclick="addToCart('Longan',300)">
+        Add to Cart
+    </button>
+
+    <button class="order-btn"
+        onclick="orderNow('Longan',300)">
+        Order Now
+    </button>
+</div>
+
+
+
+
+<!-- 47. BER -->
+<div class="fruit-card">
+    <img src="ber.jpeg">
+    <h3>Ber</h3>
+    <p>Fresh sweet and juicy Indian ber.</p>
+    <div class="price">₹100 / kg</div>
+
+    <button class="cart-btn"
+        onclick="addToCart('Ber',100)">
+        Add to Cart
+    </button>
+
+    <button class="order-btn"
+        onclick="orderNow('Ber',100)">
+        Order Now
+    </button>
+</div>
+
+
+
+
+
+
+
+</div>
+
+
+
+
+<script>
+
+let cart =
+    JSON.parse(localStorage.getItem("cart")) || [];
+
+function addToCart(name, price) {
+
+    let existing =
+        cart.find(function(item) {
+            return item.name === name;
+        });
+
+    if (existing) {
+        existing.quantity++;
+    } else {
+        cart.push({
+            name: name,
+            price: price,
+            quantity: 1
+        });
+    }
+
+    localStorage.setItem(
+        "cart",
+        JSON.stringify(cart)
+    );
+
+    updateCartCount();
+
+    alert(name + " added to cart!");
+}
+
+function orderNow(name, price) {
+
+    addToCart(name, price);
+
+    window.location.href = "Cart.html";
+}
+
+function updateCartCount() {
+
+    let count = 0;
+
+    cart.forEach(function(item) {
+        count += item.quantity;
+    });
+
+    let cartCount =
+        document.getElementById("cartCount");
+
+    if (cartCount) {
+        cartCount.innerText = count;
+    }
+}
+
+updateCartCount();
+
+</script>
+<!-- ================= FOOTER ================= -->
+
+<footer>
+
+    <p>
+        © 2026 FRUNIRA | Fresh Fruit • Healthy Life • Happy You
+    </p>
+
+</footer>
+
+</body>
+
+</html>
